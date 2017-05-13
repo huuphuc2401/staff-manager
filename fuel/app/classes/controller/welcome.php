@@ -32,6 +32,7 @@ class Controller_Welcome extends Controller
 		return Response::forge(View::forge('welcome/index'));
 	}
 
+
 	/**
 	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
 	 * show how to use them.
