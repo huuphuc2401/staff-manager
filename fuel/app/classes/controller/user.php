@@ -2,14 +2,20 @@
 
 class Controller_User extends Controller_Hybrid {
 
-	public function action_index() {
+	public function action_index() 
+	{
 		$data['users'] = Model_User::find('all');
+		foreach ($data['users'] as $key => $user)
+		{
+			$data['users'][$key]['full_name'] = $user
+		}
 		$data['message'] = 'aaa';
 		$this->template->title = "Users";
 		$this->template->content = View::forge('user/index', $data);
 	}
 
-	public function action_view($id = null) {
+	public function action_view($id = null) 
+	{
 		is_null($id) and Response::redirect('user');
 
 		if (!$data['user'] = Model_User::find($id)) {

@@ -15,7 +15,7 @@
 			<tr v-for="item in users">
 
 				<td>{{item.username}}</td>
-				<td>{{item.fullname}}</td>
+				<td>{{item.full_name}}</td>
 				<td>
 					<a :href="'<?php echo Uri::base(false); ?>user/view/' + item.id">View</a>
 				</td>
