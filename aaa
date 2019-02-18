@@ -1,0 +1,18 @@
+1. Become large and hard to maintenace
+2. Take much time for training new dev
+3. Hard to apply automation testing
+
+Solution: 
+- Separate X-MON to several parts, each part have an independent reponsibility. 
+They run in different server (Use docker) and communication by Restful API with JSON data.
+
+Advantage
+1. Each part have a small scope, easier to maintenance.
+2. We can choose technology appropriate for each part.
+3. Dev take less time for training. Even if they don't know XMON, they can work for a part (Ex: CRUD api for Twilio)
+4. We can apply test more easily for API
+5. Flexible for team working. Ex: At the same time, Dev A write API, Dev B write Frontent, Tester C write automation test for API.
+6. Using docker help us to set up environment very fast
+
+Disadvantage
+1. Join data is very hard
